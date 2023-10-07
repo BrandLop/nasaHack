@@ -57,7 +57,7 @@ loader.load( 'assets/Robot.glb', function ( gltf ) {
 loader.load( 'assets/WikiplanetSpaceStation(WSS).glb', function ( gltf ) {
   const model = gltf.scene;
   model.scale.set(3,3,3);
-  model.position.set(10,0,0)
+  model.position.set(17,0,3)
   scene2.add( model );
 });
 

@@ -29,10 +29,11 @@ body{
 
 .textconta{
     position: absolute;
-    width: 300px;
-    height: 100px;
-    background-color: white;
-    left: 20%;
-    bottom: 10%;
-    border-radius: 10px;
+    width: 400px;
+    height: 130px;
+    background-color: #047c977c;
+    left: 15%;
+    bottom: 15%;
+    border: 3px solid transparent; 
+    border-image: linear-gradient(to bottom, #d6dea9 0%, #5a5c4f 100%) 1;
 }
