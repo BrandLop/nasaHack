@@ -16,12 +16,12 @@ var scene,scene2, renderer,renderer2, orbit;
 
 /*////////////////////////////////////////*/
 var container2 = document.getElementById( "canvas" );
-const camera2 = new THREE.PerspectiveCamera (55, 1300 / 300, 0.1, 1000 );
+const camera2 = new THREE.PerspectiveCamera (55, 1300 / 200, 0.1, 1000 );
 camera2.position.set( 0 ,0, 10 );
 scene2 = new THREE.Scene();
 scene2.background = new THREE.Color("#32a852");
 renderer2 = new THREE.WebGLRenderer( { antialias: true } );
-renderer2.setSize( 1300, 300 );
+renderer2.setSize( 1300, 200 );
 container2.appendChild( renderer2.domElement);
 
 const pointLight = new THREE.PointLight( 0xffffff, 1, 100 );
@@ -40,11 +40,6 @@ loader.load( 'assets/Astronaut.glb', function ( gltf ) {
 
 } );
 
-const controls2 = new OrbitControls(camera2,renderer2.domElement);
-controls2.target.set(0,0,0);
-controls2.enableDamping = true;
-controls2.dampingFactor = 0.05;
-
 
 animate();
 
@@ -57,7 +52,7 @@ function animate() {
 
 const camera = new THREE.PerspectiveCamera(60, 1300 / 800, 0.1, 4000);
 
-camera.position.z = 800;
+camera.position.z = 900;
 
 /*////////////////////////////////////////*/
 
