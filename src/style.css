@@ -1,3 +1,13 @@
 html{ background: #000; }
-canvas { display: block; }
-body{overflow:hidden}
+
+#canvas{
+    height: 300px;
+    width: 1300px;
+    background: #ffffff;
+}
+
+#canvas2{
+    height: 1000px;
+    width: 1300px;
+    background: #ffff;
+}
