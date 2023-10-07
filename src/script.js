@@ -30,7 +30,7 @@ scene2.add( pointLight );
 
 const loader = new GLTFLoader();
 
-loader.load( 'assets/SolarSystem.glb', function ( gltf ) {
+loader.load( 'assets/Astronaut.glb', function ( gltf ) {
 
 	scene2.add( gltf.scene );
 
@@ -55,7 +55,7 @@ function animate() {
 	
 }
 
-const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 4000);
+const camera = new THREE.PerspectiveCamera(60, 1300 / 800, 0.1, 4000);
 
 camera.position.z = 800;
 
@@ -67,7 +67,7 @@ var container = document.getElementById( "canvas2" );
 
 renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( 1300, 1000 );
+renderer.setSize( 1300, 800 );
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
 container.appendChild( renderer.domElement);
