@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script type="module" src="src/script.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+</head>
+<body>
+    <Canvas></Canvas>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec3 vNormal;
+        uniform float t;
+        void main() 
+        {
+            vNormal = normalize( normalMatrix * normal );
+            vec3 pos = position;
+            pos.x += ((sin(t + position.x + 0.4) * 3.0) * (sin(t + position.x) * 2.0) ) / 1.0;
+            pos.y += ((sin(t + position.y) * 2.0) * (sin(t + 2.0 + position.y) * 1.0) ) / 1.0;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
+        }
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-vertex"> 
+        varying vec3 vNormal;
+        uniform float t;
+        void main() 
+        {
+            float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, 1.0 ) ), 2.0 );
+            gl_FragColor = vec4( 1.0, 0.8, 0.5, 0.7 ) * intensity;
+        }
+    </script>
+</body>
+
+</html>
