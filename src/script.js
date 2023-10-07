@@ -2,6 +2,7 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.117.1/build/three.m
 import { OrbitControls } from 'https://cdn.skypack.dev/three-stdlib@2.8.5/controls/OrbitControls';
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js";
 import { RGBELoader } from 'https://cdn.skypack.dev/three-stdlib@2.8.5/loaders/RGBELoader';
+import { mergeBufferGeometries } from 'https://cdn.skypack.dev/three-stdlib@2.8.5/utils/BufferGeometryUtils';
 
 var renderCalls = [];
 function render () {
@@ -16,35 +17,62 @@ var scene,scene2, renderer,renderer2, orbit;
 
 /*////////////////////////////////////////*/
 var container2 = document.getElementById( "canvas" );
-const camera2 = new THREE.PerspectiveCamera (55, 1300 / 200, 0.1, 1000 );
-camera2.position.set( 0 ,0, 10 );
+const camera2 = new THREE.PerspectiveCamera (55, 1300 / 200, 0.1, 100 );
+camera2.position.set( 0 ,0, 20 );
 scene2 = new THREE.Scene();
-scene2.background = new THREE.Color("#32a852");
-renderer2 = new THREE.WebGLRenderer( { antialias: true } );
+
+renderer2 = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
 renderer2.setSize( 1300, 200 );
+renderer2.setClearColor( 0x000000, 0 )
 container2.appendChild( renderer2.domElement);
 
-const pointLight = new THREE.PointLight( 0xffffff, 1, 100 );
+const pointLight = new THREE.DirectionalLight( 0xffffff, 2.3 );
 pointLight.position.set( 10, 10, 10 );
+const aoAmbiental = new THREE.AmbientLight(0xffffff, 0.5)
 scene2.add( pointLight );
-
+ 
 const loader = new GLTFLoader();
+let mixer;
+let realizar;
+loader.load( 'assets/Robot.glb', function ( gltf ) {
+  const model = gltf.scene;
+	scene2.add( model );
+  model.position.set(-2,-2,3)
+  model.scale.set(2,2,2)  
+  //model.rotateY(Math.PI/2  )
+  console.log(gltf)
+  const clips = gltf.animations;
+  mixer = new THREE.AnimationMixer(model);
 
-loader.load( 'assets/Astronaut.glb', function ( gltf ) {
-
-	scene2.add( gltf.scene );
-
+  const idleClip = THREE.AnimationClip.findByName(clips,'RobotArmature|Robot_Wave')
+  const idleAction = mixer.clipAction(idleClip);
+  idleAction.clampWhenFinished = true;
+  //idleAction.loop= THREE.LoopOnce
+  idleAction.play();
+  realizar = true;
 }, undefined, function ( error ) {
-
 	console.error( error );
-
 } );
 
+loader.load( 'assets/WikiplanetSpaceStation(WSS).glb', function ( gltf ) {
+  const model = gltf.scene;
+  model.scale.set(3,3,3);
+  model.position.set(10,0,0)
+  scene2.add( model );
+});
+
+const geometry1 = new THREE.PlaneGeometry( 200, 2 );
+const material1 = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
+const plane = new THREE.Mesh( geometry1, material1 );
+scene2.add( plane );
 
 animate();
-
+const clock = new THREE.Clock();
 function animate() {
+  if(mixer && realizar == true){
+    mixer.update(clock.getDelta());
 
+  }
 	requestAnimationFrame( animate );	
 	renderer2.render( scene2, camera2 );
 	
