@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    position: relative;
 }
 
 .container{
@@ -14,14 +13,26 @@ body{
     width: 1300px;
     position: absolute;
     bottom: 0;
-    padding: 0 10px 10px 10px;
     border-radius: 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 #canvas2{
     height: 800px;
     width: 1300px;
     padding: 10px;
+    background-color: #0B3C90;
+    opacity: 1;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.textconta{
+    position: absolute;
+    width: 300px;
+    height: 100px;
     background-color: white;
+    left: 20%;
+    bottom: 10%;
     border-radius: 10px;
 }

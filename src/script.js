@@ -62,7 +62,7 @@ loader.load( 'assets/WikiplanetSpaceStation(WSS).glb', function ( gltf ) {
 });
 
 const geometry1 = new THREE.PlaneGeometry( 200, 2 );
-const material1 = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
+const material1 = new THREE.MeshBasicMaterial( {color: 0xFC3D21, side: THREE.DoubleSide} );
 const plane = new THREE.Mesh( geometry1, material1 );
 scene2.add( plane );
 
