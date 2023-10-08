@@ -16,13 +16,13 @@ render();
 var scene,scene2, renderer,renderer2, orbit;
 
 /*////////////////////////////////////////*/
-var container2 = document.getElementById( "canvas" );
-const camera2 = new THREE.PerspectiveCamera (55, 1300 / 200, 0.1, 100 );
+var container2 = document.getElementById( "pedro_class2" );
+const camera2 = new THREE.PerspectiveCamera (55, 1000 / 200, 0.1, 100 );
 camera2.position.set( 0 ,0, 20 );
 scene2 = new THREE.Scene();
 
 renderer2 = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
-renderer2.setSize( 1300, 200 );
+renderer2.setSize( 1000, 200 );
 renderer2.setClearColor( 0x000000, 0 )
 container2.appendChild( renderer2.domElement);
 
@@ -44,7 +44,7 @@ loader.load( 'assets/Robot.glb', function ( gltf ) {
   const clips = gltf.animations;
   mixer = new THREE.AnimationMixer(model);
 
-  const idleClip = THREE.AnimationClip.findByName(clips,'RobotArmature|Robot_Wave')
+  const idleClip = THREE.AnimationClip.findByName(clips,'RobotArmature|Robot_Yes')
   const idleAction = mixer.clipAction(idleClip);
   idleAction.clampWhenFinished = true;
   //idleAction.loop= THREE.LoopOnce
@@ -78,7 +78,7 @@ function animate() {
 	
 }
 
-const camera = new THREE.PerspectiveCamera(60, 1300 / 800, 0.1, 4000);
+const camera = new THREE.PerspectiveCamera(60, 1000 / 800, 0.1, 4000);
 
 camera.position.z = 900;
 
@@ -86,11 +86,11 @@ camera.position.z = 900;
 
 scene = new THREE.Scene();
 //scene.fog =  new THREE.FogExp2( 0x000000, 0.0005);//new THREE.Fog(0xEEEEEE, 20, 600);
-var container = document.getElementById( "canvas2" );
+var container = document.getElementById( "pedro_class1" );
 
 renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( 1300, 800 );
+renderer.setSize( 1000, 800 );
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
 container.appendChild( renderer.domElement);
@@ -113,7 +113,6 @@ renderCalls.push(function(){
 
 
 let textures = {
-  map1: await new THREE.TextureLoader().loadAsync("assets/mapa.jpg"),
   map2: await new THREE.TextureLoader().loadAsync("assets/mapa2.jpg"),
   map2_1: await new THREE.TextureLoader().loadAsync("assets/earthspec1k.jpg"),
   map2_2: await new THREE.TextureLoader().loadAsync("assets/earthbump1k.jpg"),

@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cazador de Eclipses</title>
+    <link rel="shortcut icon" href="./assets/eclipse.png" type="image/x-icon">
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/background.css">
-    <link rel="stylesheet" href="src/eclipse.css">
     <script type="module" src="src/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/whiteboard.css">
+    <link rel="stylesheet" href="./src/cards.css">
 </head>
 <body>  
+    <nav class="navbar" style="background: #0B3C90;">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="./assets/nasalogo.png" alt="" width="60" height="50" class="d-inline-block align text-top">
+                <span class="h2 fw-bold mb-0 text-light">Cazador de Eclipses</span>
+            </a>
+        </div>
+    </nav>
+
+    <div id="comets">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+
     <div class="eclipseContainer" id="eclipseC">
         <div class="eclipseCompleto">
             <div class="eclipse">
@@ -18,24 +43,194 @@
                 <div class="moon"></div>
             </div>
         </div>
-    </div>  
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
-
-    <div class="container">
-        <div id="canvas"></div>
-        <div id="canvas2"></div>   
-        <div class="textconta"></div> 
     </div>
+
+    <div style="display:flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="areas232">
+            <div id="pedro_class1"></div>
+            <div id="pedro_class2"></div> 
+            <div class="pedro_class3" id="pedro_class3">
+                En cierta parte de la Galaxia, existe una peculiar raza de seres metálicos con un idioma casi incomprensible para los seres humanos,
+                pero con un intelecto y tecnologia como el de ninguno otro.
+                <br>
+                Dar click para continuar leyendo ...
+            </div>  
+        </div>
+        <div class="areas33">
+            <div style="display:flex;" id="buttons22">
+                <div id="button1_pedro">
+                    <img src="assets/moon2.png" width="70px" height="70px">
+                </div>
+                <div id="button2_pedro">
+                    <img src="assets/sun2.png" width="50px" height="50px">
+                </div>
+            </div>
+            
+            <div  class="carddd" id="cardlunar1">
+                <img src="assets/eclips22.jpg"  width="200" height="200" style="border-radius: 50%;">
+                <p>Los eclipses de luna se producen cuando la luna se mueve detrás de la Tierra, desde la perspectiva del sol.</p>
+            </div>
+            
+            <div  class="carddd" id="cardsolar1" style="display: none;">
+                <img src="assets/solar.jpg" width="200" height="200" style="border-radius: 50%;">
+                <p>Se produce cuando la Luna nueva cubre totalmente al sol. Es decir cuando la Luna se ubica entre la Tierra y el Sol.</p>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+
 
     <div>
         <img id="orangeRocket" src="assets/orangeRocket.gif"> 
     </div>
+ 
+    <div>
+        <img id="majorTom1" src="assets/majorTom1-crop.gif"> 
+    </div>
+
+    <div id=content>
+        <div id="white-board">
+            <div id="text">
+                <span>Fases de un Eclipse Solar</span>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/1.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/1-1.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/2.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/3.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/4.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/5.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/5-1.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/6.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/7.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/8.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/9.png" class="rounded" alt="" width="70%" height="48%">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/10.png"  class="rounded"alt="" width="70%" height="48%">
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-6 text-black">Imágenes renderizadas con blender</div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div id="eraser"></div>
+            <div id="red-pen"></div>
+            <div id="blue-pen"></div>
+        </div>
+    </div>
+
+    <div class="contenedorTarjetas">  
+        <div class="tarjetas">
+            <div class = "container2">
+                <!--Primer tarjeta-->
+                <div class = "card">
+                    <h1>SOLAR</h1>
+                    <!--Contenido de la tarjeta, se puede cambiar el texto o la imagen sin problema -->
+                    <div class="content">
+                        <h2>Eclipse solar</h2>
+                        <p>
+                            Un eclipse solar se produce cuando la luna se interpone 
+                            en el camino de la luz del sol y proyecta su sombra en la Tierra. 
+                            Eso significa que durante el día, la luna se mueve 
+                            por delante del sol y se pone oscuro.     
+                        </p>
+                    </div>
+                    <img src="assets/eclipse.png" class="imgmision">
+                </div>
+        
+                <div class = "card">
+                    <h1>LUNAR</h1>
+                    <div class="content">
+                        <h2>Eclipse lunar</h2>
+                        <p>
+                            Durante un eclipse lunar, la Tierra impide que 
+                            la luz del sol llegue hasta la luna. Eso quiere decir que a la noche, 
+                            la luna llena desaparece por completo, 
+                            a medida que la sombra de la Tierra la cubre.
+                        </p>
+                    </div>
+                    <img src="assets/pngegg.png">
+                </div>
+        
+            </div>
+        </div>
+        <div class="tarjetas" id="TARJETAS2">
+            <div class = "container2">
+                <!--Primer tarjeta-->
+                <div class = "card">
+                    <h1>DIFERENCIAS</h1>
+                    <div class="content">
+                        <h2>Diferencias</h2>
+                        <p>
+                            Eclipse solar, el sol se pone más oscuro. <br>
+                            Eclipse lunar, la luna se pone más oscura. <br>
+                            Un eclipse solar sólo es visible desde un camino 
+                            limitado en la Tierra, mientras que un eclipse lunar es visible desde todas las ubicaciones del 
+                            lado nocturno de la Tierra mientras dure.
+                        </p>
+                    </div>
+                    <img src="assets/telescopio.png" class="imgmision">
+                </div>
+        
+                <div class = "card">
+                    <h1>TEMPORADA</h1>
+                    <div class="content">
+                        <h2>Temporada de eclipses</h2>
+                        <p>
+                            Son los momentos en los que los eclipses ocurren, 
+                            solo ocurren cada seis meses por la inclinación de 5 
+                            grados de la luna, solo es posible un eclipse cuando se 
+                            encuentre en los nodos lunares y que estos se encuentren 
+                            frente o detrás de la tierra alineándose con el sol.
+                        </p>
+                    </div>
+                    <img src="assets/calendario.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3" style="background: #0B3C90;">
+        <p class="col-md-6 mb-0 text-mute text-white">©2023 Lobos Emplumados</p>
+        <!-- <p class="col-md-4 mb-0 text-mute text-white">By Martin Otamendi, Pedro Quiroz, Juan Ozuna y Brandon Lopez</p> -->
+        <!-- <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a> -->
+        <ul class="nav col-md-6 justify-content-end">
+            <li class="nav-item text-white py-2 px-1">By</li>
+            <li class="nav-item"><a href="https://github.com/MartinOtamendiT" class="nav-link px-2 text-white">Martin Otamendi</a></li>
+            <li class="nav-item"><a href="https://github.com/woaka132" class="nav-link px-2 text-white">Pedro Quiroz</a></li>
+            <li class="nav-item"><a href="https://github.com/JOsunaOrduno" class="nav-link px-2 text-white">Juan Ozuna</a></li>
+            <li class="nav-item"><a href="https://github.com/BrandLop" class="nav-link px-2 text-white">Brandon Lopez</a></li>
+        </ul>
+    </footer>
+
     <script>
         setTimeout(() => {document.getElementById('eclipseC').className += " none"; }, 4000); 
         setTimeout(() => {document.getElementById('eclipseC').style.display = 'none' }, 5500); 
-      
     </script>
     <script id="vertexShader" type="x-shader/x-vertex">
         varying vec3 vNormal;
@@ -49,7 +244,6 @@
             gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
         }
     </script>
-
     <script id="fragmentShader" type="x-shader/x-vertex"> 
         varying vec3 vNormal;
         uniform float t;
@@ -59,6 +253,87 @@
             gl_FragColor = vec4( 1.0, 0.8, 0.5, 0.7 ) * intensity;
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        let grados = 0;
+        var ban = 0 ;
+        var ban2 = 1 ;
+        const bt1 = document.getElementById("button1_pedro");
+        const bt2 = document.getElementById("button2_pedro");
+        const bt3 = document.getElementById("pedro_class3");
+        const card12 = document.getElementById("cardlunar1");
+        const card13 = document.getElementById("cardsolar1");   
+        
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        bt1.addEventListener("click", () =>{
+            grados = grados + 180;
+            document.getElementById('buttons22').style.transform = `rotate(${grados}deg)`;
+            if( ban == 0){
+                ban = 1; 
+                document.getElementById('cardlunar1').style.display= `none`;
+                document.getElementById('cardsolar1').style.display= `flex`;
+            }else{
+                document.getElementById('cardlunar1').style.display= `flex`;
+                document.getElementById('cardsolar1').style.display= `none`;
+                ban = 0; 
+            }
+            
+            
+        })
+
+        bt2.addEventListener("click", () =>{
+            grados = grados + 180;
+            document.getElementById('buttons22').style.transform = `rotate(${grados}deg)`;
+            if( ban == 0){
+                ban = 1; 
+                document.getElementById('cardlunar1').style.display= `none`;
+                document.getElementById('cardsolar1').style.display= `flex`;
+            }else{
+                document.getElementById('cardlunar1').style.display= `flex`;
+                document.getElementById('cardsolar1').style.display= `none`;
+                ban = 0; 
+            }
+        })
+
+        bt3.addEventListener("click", () =>{
+            if( ban2 == 1){
+                bt3.textContent = `Sin embargo un día, un individuo de esta peculiar raza decidió emprender un viaje en busca de conocer la diversidad que existe en el vasto universo, sin saber que su viaje no sería tan llevadero. \n Dar click para continuar leyendo ...`
+                ban2 = 2;
+            }else if (ban2 == 2){
+                bt3.textContent = `De camino a una tierra desconocida, se encontró con un desafortunado evento, ¡un gran cúmulo de asteroides que impactaron de manera crítica contra el casco de su nave! Esto provocó que se desviara. Dar click para continuar leyendo ...`,
+                ban2 = 3;
+            }else if (ban2 == 3){
+                bt3.textContent = `Gracias al destino, logró llegar cerca de la órbita de nuestra Luna, sin embargo, la reparación de la nave puede llevar mucho tiempo, por lo que es necesario conseguir energía para poder abastecer la nave. Dar click para continuar leyendo ...`,
+                ban2 = 4;
+            }else if (ban2 == 4){
+                bt3.textContent = `La nave tiene receptores solares donde se puede obtener energía del Sol, por lo que nuestro pequeño amigo necesita conocer el comportamiento de la Luna y la Tierra con respcto a este astro. Dar click para continuar leyendo ...`,
+                ban2 = 5;
+            }else if (ban2 == 5){
+                bt3.textContent = `Dado que esta misión es muy importante, es conocer cómo se producen los eclipse solares y lunares, ¡tenemos que evitar cualquier imprevisto! Dar click para continuar leyendo ...`,
+                ban2 = 6;
+            }else if (ban2 == 6){
+                bt3.textContent = `En cierta parte de la Galaxia, existe una peculiar raza de seres metálicos, con un idioma casi incompensible para los seres humanos, pero con un intelecto y tecnología como el de ninguno otro. Reiniciar la historia ...`,
+                ban2 = 1;
+            }
+            
+            
+            
+        })
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

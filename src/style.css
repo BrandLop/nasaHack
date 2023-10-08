@@ -2,38 +2,109 @@ body{
     background-color: black;
 }
 
-.container{
+.areas232{
     padding-top: 5%;
-    padding-left: 10%;
     display: flex;
     border-radius: 10px;
 }
-#canvas{
-    height: 200px;
-    width: 1300px;
-    position: absolute;
-    bottom: 0;
+
+.areas33{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    height: 300px;
+    width: 1000px;
+    background-image: linear-gradient(to bottom,#3b0f38 0%, #631616 100%);
     border-radius: 10px;
-    padding: 10px 10px 10px 10px;
 }
 
-#canvas2{
+#pedro_class1{
     height: 800px;
-    width: 1300px;
-    padding: 10px;
+    width: 1000px;
     background-color: #0B3C90;
     opacity: 1;
-    padding: 10px 10px 10px 10px;
     border-radius: 10px;
+    padding: 10px 1010px 810px 10px;
 }
 
-.textconta{
+#pedro_class2{
+    position: absolute;
+    height: 200px;
+    width: 1000px;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding: 10px 1010px 20px 10px;
+}
+
+
+
+.pedro_class3{
     position: absolute;
     width: 400px;
     height: 130px;
-    background-color: #047c977c;
-    left: 15%;
-    bottom: 15%;
+    background-color:#0e42a1a8;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 10px;
     border: 3px solid transparent; 
     border-image: linear-gradient(to bottom, #d6dea9 0%, #5a5c4f 100%) 1;
+    cursor: pointer;
+    color: white;
+}
+
+#button1_pedro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    box-shadow: -10px -10px 2px 1px rgba(0, 0, 255, .4);
+    cursor: pointer; 
+}
+
+#button2_pedro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 50px;
+    box-shadow: 10px 5px 5px orange;
+    cursor: pointer;
+}
+
+#buttons22{
+    transition: all 2s;
+}
+
+.carddd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    width: 600px;
+    height: 70%;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    transition: all 2s;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate2 {
+ 40%{
+    width: 0;
+ }
+ 100%{
+    width: 250px;
+ }
 }
